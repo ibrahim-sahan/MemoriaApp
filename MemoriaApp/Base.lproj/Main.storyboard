@@ -114,6 +114,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="18D-i6-gO5"/>
+                    <connections>
+                        <outlet property="contentText" destination="mVn-oD-Ljd" id="MIr-c1-1go"/>
+                        <outlet property="dateText" destination="AcK-zq-Sq9" id="Fh4-2b-FRF"/>
+                        <outlet property="daywordText" destination="zQ4-Dj-EkE" id="gGl-Et-fuQ"/>
+                        <outlet property="imageView" destination="JkS-Nn-AiP" id="GxD-g9-lXn"/>
+                        <outlet property="saveButtonClicked" destination="EcG-1g-Qge" id="1J0-oY-oDn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ANN-jB-KRL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

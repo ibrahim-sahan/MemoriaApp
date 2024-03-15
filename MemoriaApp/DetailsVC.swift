@@ -11,8 +11,8 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var daywordText: UITextField!
-    @IBOutlet weak var contentText: UITextField!
     @IBOutlet weak var dateText: UITextField!
+    @IBOutlet weak var contentText: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +27,8 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     }
     
     
-    @IBAction func saveButtonClicked(_ sender: Any) {
-    }
+    @IBOutlet var saveButtonClicked: UIView!
+    
     
     @objc func hideKeyboard(){
         
