@@ -32,9 +32,7 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
         NotificationCenter.default.addObserver(self, selector: #selector(getData), name: NSNotification.Name(rawValue: "newData"), object: nil)
-        
     }
 
     @objc func addButtonClicked() {
@@ -57,6 +55,7 @@ class ViewController: UIViewController {
         fetchRequest.returnsObjectsAsFaults = false
            
         do {
+            
             let results = try context.fetch(fetchRequest)
             
             if results.count > 0 {
@@ -78,7 +77,6 @@ class ViewController: UIViewController {
                     self.tableView.reloadData()
                     
                 }
-                
             }
             
         } catch {
@@ -95,9 +93,7 @@ class ViewController: UIViewController {
             destinationVC.chosenDailyId = selectedDailyId
             
         }
-        
     }
-    
 }
 
 extension ViewController : UITableViewDataSource {
@@ -132,14 +128,14 @@ extension ViewController : UITableViewDataSource {
             fetchRequest.predicate = NSPredicate(format: "idData = %@", idString)
             fetchRequest.returnsObjectsAsFaults = false
             
-            do{
+            do {
+                
                 let results = try context.fetch(fetchRequest)
                 if results.count > 0 {
                     
                     for result in results as! [NSManagedObject] {
                         
                         if let id = result.value(forKey: "idData") as? UUID {
-                            
                             
                             if id == idArray[indexPath.row] {
                                 
@@ -150,9 +146,7 @@ extension ViewController : UITableViewDataSource {
                                 self.tableView.reloadData()
                                 
                                 do {
-                                    
                                     try context.save()
-                                    
                                 } catch {
                                     print("error")
                                 }
@@ -160,21 +154,15 @@ extension ViewController : UITableViewDataSource {
                                 break
                                 
                             }
-                            
                         }
-                        
                     }
-                    
                 }
                 
             } catch {
-                
+                print("error")
             }
-            
         }
-        
     }
-    
 }
 
 extension ViewController : UITableViewDelegate {
