@@ -15,17 +15,21 @@ MemoriaApp is a simple iOS application designed to facilitate journaling for use
 1. Adding a New Entry:
 
 · Tap the "+" button on the main screen to create a new journal entry.
+
 · Enter a keyword, content, select a date, and optionally attach an image.
+
 · Tap the "Save" button to save the entry.
 
 2. Viewing Entry Details:
 
 · Tap on a journal entry from the main screen to view its details.
+
 · Details include the keyword, content, date, and attached image.
 
 3. Deleting an Entry:
 
 · Swipe left on a journal entry from the main screen to reveal the delete option.
+
 · Tap "Delete" to remove the entry from the app.
 
 ## Installation
